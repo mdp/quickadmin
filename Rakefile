@@ -5,10 +5,10 @@ require 'merb-core'
 require 'merb-core/tasks/merb'
 
 GEM_NAME = "quickadmin"
-AUTHOR = "Your Name"
-EMAIL = "Your Email"
-HOMEPAGE = "http://merbivore.com/"
-SUMMARY = "Merb Slice that provides ..."
+AUTHOR = "Mark Percival"
+EMAIL = "mark@mpercival.com"
+HOMEPAGE = "http://github.com/markpercival/quickadmin"
+SUMMARY = "Merb Slice adds quick DB'less OpenID authentication to your app"
 GEM_VERSION = "1.0.3"
 
 spec = Gem::Specification.new do |s|
