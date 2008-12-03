@@ -27,8 +27,7 @@ Add the authorized OpenID's to 'config/quickadmins.yaml'
     - john.schult.us
 
 It will auto-magically create the necessary 'config/quickadmins.yaml'
-on the first load of the slice if you don't already have one. 
-You'll need to customize it with your own admin users.
+on the first load if you don't already have one.
 
 ### Author and license info
 
