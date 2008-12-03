@@ -1,0 +1,6 @@
+%h3.notice= message[:notice]
+
+= form :action => slice_url(:quickadmin, :openid) do
+  %label OpenID
+  %input{:name => 'openid_url'}
+  =submit "Login"
