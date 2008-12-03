@@ -1,13 +1,13 @@
-## quickadmin
+# quickadmin
 
 ### A merb slice that authenticates listed OpenID users.
 
-### About
+## About
 
 Sometime you have an app that doesn't need full authentication, but you'd like to be able to
 limit some pages to admins only. This is the story of that app...
 
-### Installation and use:
+## Installation and use
 
 Add the following to dependencies.rb
 
@@ -29,7 +29,7 @@ Add the authorized OpenID's to 'config/quickadmins.yaml'
 It will auto-magically create the necessary 'config/quickadmins.yaml'
 on the first load if you don't already have one.
 
-### Author and license info
+## Author and license info
 
 - Official Repo: [http://github.com/markpercival/quickadmin](http://github.com/markpercival/quickadmin)
 - &copy; 2008, [Mark Percival](http://mpercival.com) - [mark@mpercival.com](mailto:mark@mpercival.com)
