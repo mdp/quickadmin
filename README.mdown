@@ -11,11 +11,7 @@ limit some pages to admins only. This is the story of that app...
 
 ## Installation and use
 
-Install the gem via GitHub
-
-    sudo gem install markpercival-quickadmin
-    
-Or from the cloned repo
+Install the gem from the cloned repo
 
     git clone git://github.com/markpercival/quickadmin.git
     cd quickadmin
@@ -23,7 +19,7 @@ Or from the cloned repo
 
 Add the following to dependencies.rb
 
-    dependency 'markpercival-quickadmin', :require_as => 'quickadmin'
+    dependency 'quickadmin'
 
 and then add this to router.rb
 
