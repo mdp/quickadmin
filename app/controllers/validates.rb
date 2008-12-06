@@ -51,50 +51,9 @@ class Quickadmin::Validates < Quickadmin::Application
   private
 
   def openid_callback_url
-    "#{request.protocol}://#{request.host}#{Merb::Router.url(:openid)}"
+    "#{request.protocol}://#{request.host}#{Merb::Router.url(:quickadmin_openid)}"
   end
 
-  # Overwrite the on_success! method with the required behavior for successful logins
-  #
-  # @api overwritable
-  def on_success!(response, sreg_response)
-    if user = find_user_by_identity_url(response.identity_url)
-      user
-    else
-      request.session[:'openid.url'] = response.identity_url
-      required_reg_fields.each do |f|
-        session[:"openid.#{f}"] = sreg_response.data[f] if sreg_response.data[f]
-      end if sreg_response
-      redirect!(Merb::Router.url(:signup))
-    end
-  end
-
-  # Overwrite the on_failure! method with the required behavior for failed logins
-  #
-  # @api overwritable
-  def on_failure!(response)
-    session.authentication.errors.clear!
-    session.authentication.errors.add(:openid, 'OpenID verification failed, maybe the provider is down? Or the session timed out')
-    nil
-  end
-
-  #
-  # @api overwritable
-  def on_setup_needed!(response)
-    request.session.authentication.errors.clear!
-    request.session.authentication.errors.add(:openid, 'OpenID does not seem to be configured correctly')
-    nil
-  end
-
-  #
-  # @api overwritable
-  def on_cancel!(response)
-    request.session.authentication.errors.clear!
-    request.session.authentication.errors.add(:openid, 'OpenID rejected our request')
-    nil
-  end
-
-  #
   # @api overwritable
   def required_reg_fields
     ['email']
