@@ -1,6 +1,6 @@
 # quickadmin
 
-### A merb slice that authenticates listed OpenID users.
+### A merb slice that authenticates yaml defined OpenID users.
 
 ____
 
