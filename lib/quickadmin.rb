@@ -2,7 +2,7 @@ if defined?(Merb::Plugins)
 
   $:.unshift File.dirname(__FILE__)
 
-  load_dependency 'merb-slices'
+  dependency 'merb-slices'
   Merb::Plugins.add_rakefiles "quickadmin/merbtasks", "quickadmin/slicetasks", "quickadmin/spectasks"
 
   # Register the Slice for the current host application
@@ -70,7 +70,8 @@ if defined?(Merb::Plugins)
     def self.sample_yaml
       sample = <<EOF
 - mark.mpercival.com
-- barry.change.gov
+- john.schult.us
+- ivey.gweezlebur.com
 EOF
     end
     
