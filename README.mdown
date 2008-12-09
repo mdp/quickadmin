@@ -9,6 +9,19 @@ ____
 Sometime you have an app that doesn't need full authentication, but you'd like to be able to
 limit some pages to admins only. This is the story of that app...
 
+### MerbDay Atlanta
+
+This was originally presented at [MerbDayAtlanta](http://merbday.com/). The orginal slides are
+located in the [Merbday GitHub Repo](http://github.com/merbday/atlanta/).
+
+### Why doesn't it use Merb-Auth
+
+Because it's not returning a standard user object. Even with a merb-auth strategy, you still need to
+return a basic user object. It would work correctly alone, but if you roll merb-auth into your project
+and you'd have two possible user objects being stored, a complete dm user objects, and a simple OpenID.
+Also, merb-auth doesn't do authorization, just authentication. I'm going to revisit this once [merb-authz](http://github.com/hassox/merb-authz)
+is rolled into merb.
+
 ## Installation and use
 
 Install the gem from the cloned repo
