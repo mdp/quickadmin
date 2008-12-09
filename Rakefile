@@ -9,7 +9,7 @@ AUTHOR = "Mark Percival"
 EMAIL = "mark@mpercival.com"
 HOMEPAGE = "http://github.com/markpercival/quickadmin"
 SUMMARY = "Merb Slice adds quick DB'less OpenID authentication to your app"
-GEM_VERSION = "1.0.3"
+GEM_VERSION = "1.0.4"
 
 spec = Gem::Specification.new do |s|
   s.rubyforge_project = 'merb'

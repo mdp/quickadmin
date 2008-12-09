@@ -25,7 +25,7 @@ if defined?(Merb::Plugins)
     
     # Slice metadata
     self.description = "Quickadmin makes admin logins easy"
-    self.version = "1.0.3"
+    self.version = "1.0.4"
     self.author = "Mark Percival"
     
     # Stub classes loaded hook - runs before LoadClasses BootLoader
